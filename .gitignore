@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+.vscode/
+*.log
+
+# Platform
+ios/Pods/
+ios/.symlinks/
+android/.gradle/
+android/local.properties
