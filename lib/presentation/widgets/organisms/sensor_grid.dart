@@ -23,9 +23,11 @@ class SensorGrid extends ConsumerWidget {
     final sensorAsync = ref.watch(sensorDataProvider);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.lg,
-        vertical: AppSpacing.md,
+      padding: const EdgeInsets.fromLTRB(
+        AppSpacing.lg,
+        AppSpacing.sm,
+        AppSpacing.lg,
+        AppSpacing.sm,
       ),
       child: LayoutBuilder(
         builder: (context, constraints) {

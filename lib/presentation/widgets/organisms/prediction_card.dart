@@ -18,9 +18,9 @@ class PredictionCard extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(
         AppSpacing.lg,
-        0,
+        AppSpacing.sm,
         AppSpacing.lg,
-        AppSpacing.lg,
+        AppSpacing.sm,
       ),
       child: AppSurface(
         padding: const EdgeInsets.all(AppSpacing.md),
