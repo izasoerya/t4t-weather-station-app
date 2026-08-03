@@ -56,7 +56,7 @@ class PredictionCard extends ConsumerWidget {
                 )
               ],
             ),
-            const SizedBox(height: AppSpacing.md),
+            const SizedBox(height: AppSpacing.sm),
             predictionAsync.when(
               data: (prediction) => Text(
                 prediction,
