@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:weather_station_dashboard/presentation/widgets/molecules/prediction_card.dart';
+import 'package:weather_station_dashboard/presentation/widgets/organisms/prediction_card.dart';
 
 import '../../core/theme/app_palette.dart';
 import '../../core/utils/error_handler.dart';

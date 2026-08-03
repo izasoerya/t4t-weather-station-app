@@ -5,7 +5,7 @@ import 'package:weather_station_dashboard/core/theme/design_tokens.dart';
 import '../../../core/theme/app_palette.dart';
 import '../../../core/theme/app_text_styles.dart';
 import '../../providers/prediction_provider.dart';
-import 'app_surface.dart';
+import '../molecules/app_surface.dart';
 
 class PredictionCard extends ConsumerWidget {
   const PredictionCard({super.key});
