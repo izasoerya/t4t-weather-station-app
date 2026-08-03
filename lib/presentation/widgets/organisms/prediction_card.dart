@@ -28,17 +28,36 @@ class PredictionCard extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.online_prediction_rounded, color: palette.info),
-                const SizedBox(width: AppSpacing.sm),
-                Text(
-                  'Prediction Result',
-                  style: AppTextStyles.bodyLarge.copyWith(
-                    color: palette.primaryText,
-                    fontWeight: FontWeight.w600,
-                  ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.online_prediction_rounded, color: palette.info),
+                    const SizedBox(width: AppSpacing.sm),
+                    Text(
+                      'Prediction Result',
+                      style: AppTextStyles.bodyLarge.copyWith(
+                        color: palette.primaryText,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
+                IconButton(
+                  onPressed: () => ref.invalidate(predictionProvider),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(palette.hoverBg),
+                  ),
+                  color: Theme.of(context).colorScheme.primary,
+                  icon: const Icon(Icons.search_rounded, size: 20),
+                  padding: EdgeInsets.zero,
+                  // constraints: const BoxConstraints.tightFor(
+                  //   width: 24,
+                  //   height: 24,
+                  // ),
+                  // visualDensity: VisualDensity.compact,
+                )
               ],
             ),
             const SizedBox(height: AppSpacing.md),
