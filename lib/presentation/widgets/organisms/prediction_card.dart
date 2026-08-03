@@ -27,35 +27,7 @@ class PredictionCard extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.online_prediction_rounded, color: palette.info),
-                    const SizedBox(width: AppSpacing.sm),
-                    Text(
-                      'Prediction Result',
-                      style: AppTextStyles.bodyLarge.copyWith(
-                        color: palette.primaryText,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                IconButton(
-                  onPressed: () => ref.invalidate(predictionProvider),
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(palette.hoverBg),
-                  ),
-                  color: Theme.of(context).colorScheme.primary,
-                  icon: const Icon(Icons.search_rounded, size: 18),
-                  padding: EdgeInsets.zero,
-                  visualDensity: VisualDensity.compact,
-                )
-              ],
-            ),
+            _header(palette, ref, context),
             const SizedBox(height: AppSpacing.sm),
             predictionAsync.when(
               data: (prediction) => Text(
@@ -83,6 +55,38 @@ class PredictionCard extends ConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Row _header(AppPalette palette, WidgetRef ref, BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.online_prediction_rounded, color: palette.info),
+            const SizedBox(width: AppSpacing.sm),
+            Text(
+              'Prediction Result',
+              style: AppTextStyles.bodyLarge.copyWith(
+                color: palette.primaryText,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+        IconButton(
+          onPressed: () => ref.invalidate(predictionProvider),
+          style: ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll(palette.hoverBg),
+          ),
+          color: Theme.of(context).colorScheme.primary,
+          icon: const Icon(Icons.search_rounded, size: 18),
+          padding: EdgeInsets.zero,
+          visualDensity: VisualDensity.compact,
+        )
+      ],
     );
   }
 }
