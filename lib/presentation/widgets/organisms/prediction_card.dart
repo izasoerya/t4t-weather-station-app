@@ -50,13 +50,9 @@ class PredictionCard extends ConsumerWidget {
                     backgroundColor: WidgetStatePropertyAll(palette.hoverBg),
                   ),
                   color: Theme.of(context).colorScheme.primary,
-                  icon: const Icon(Icons.search_rounded, size: 20),
+                  icon: const Icon(Icons.search_rounded, size: 18),
                   padding: EdgeInsets.zero,
-                  // constraints: const BoxConstraints.tightFor(
-                  //   width: 24,
-                  //   height: 24,
-                  // ),
-                  // visualDensity: VisualDensity.compact,
+                  visualDensity: VisualDensity.compact,
                 )
               ],
             ),
