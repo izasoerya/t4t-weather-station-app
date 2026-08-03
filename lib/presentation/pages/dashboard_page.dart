@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:weather_station_dashboard/presentation/widgets/molecules/prediction_card.dart';
 
 import '../../core/theme/app_palette.dart';
-import '../../core/theme/design_tokens.dart';
 import '../../core/utils/error_handler.dart';
 import '../../domain/entities/sensor_type.dart';
 import '../providers/device_provider.dart';
@@ -66,7 +66,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                         onSensorTap: _openGraphFor,
                       ),
                       const DetailGraphSection(),
-                      const SizedBox(height: AppSpacing.md),
+                      const PredictionCard()
                     ],
                   ),
                 ),
